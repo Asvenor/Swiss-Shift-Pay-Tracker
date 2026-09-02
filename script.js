@@ -9,7 +9,7 @@ const shiftInput = document.getElementById('shiftInput')
 const addShiftButton = document.getElementById('addShiftButton')
 //Output Elements
 const shiftListOutput = document.getElementById('shiftListOutput')
-const totalHours = document.getElementById('totalours')
+const totalHours = document.getElementById('totalHours')
 const totalPay = document.getElementById('totalPay')
 const monthlyTotal = document.getElementById('monthlyTotal')
 
@@ -35,7 +35,11 @@ addShiftButton.addEventListener('click', ()=>{
         Hourly_Wage: hourly,
         Shift: shiftIn,
     }
-    
+    const hoursWorked = end - start - breakIn
+    const moneyEarned = hoursWorked * hourly
+
+    totalHours.innerText = hoursWorked
+    totalPay.innerText = moneyEarned
 
 
 })

@@ -8,6 +8,13 @@
 </head>
 <body>
     <h1>Swiss Shift & Pay Tracker</h1>
+    <p>Hinweis: Zeiten werden als Dezimalstunden eingegeben.
+    Beispiele:
+    0.5 = 30 Minuten
+    0.3 = 18 Minuten
+    0.25 = 15 Minuten
+    1.5 = 1 Stunde 30 Minuten
+    </p>
     <div class="shiftSpace">
         <div>     
             <div class="inputGroup">
@@ -27,7 +34,7 @@
 
             <div class="inputGroup">
                 <label for="breakInput">Break</label>
-                <input type="text" placeholder="0.0h" id="breakInput">
+                <input type="text" placeholder="0.0" id="breakInput">
             </div>
         </div>
 
@@ -38,14 +45,14 @@
 
         <div class="inputGroup">
             <label for="shiftInput">Shift</label>
-            <input type="text" placeholder="Shift" id="shiftInput">
+            <input type="text" placeholder="Morning" id="shiftInput">
             <button type="submit" id="addShiftButton">Add Shift</button>
         </div>
     </div>
     <div class="outputSpace">
         <div class="outputGroup">
-            <h6>Shift List</h6>
-            <div id="shiftListOutput"></div>
+            <label for="shiftList">Shift List</label>
+            <p id="shiftListOutput"></p>
         </div>
         <div class="outputGroup">
             <h2>Summary</h2>

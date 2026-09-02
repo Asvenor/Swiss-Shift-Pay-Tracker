@@ -12,9 +12,9 @@ const shiftListOutput = document.getElementById('shiftListOutput')
 const totalHours = document.getElementById('totalHours')
 const totalPay = document.getElementById('totalPay')
 const monthlyTotal = document.getElementById('monthlyTotal')
+const dateOutput = document.getElementById('dateOutput')
 
-
-
+const shiftList = []
 
 
 
@@ -38,8 +38,12 @@ addShiftButton.addEventListener('click', ()=>{
     const hoursWorked = end - start - breakIn
     const moneyEarned = hoursWorked * hourly
 
+    shiftList.push(shiftIn)
+    shiftList.push(date)
+
     totalHours.innerText = hoursWorked
     totalPay.innerText = moneyEarned
-
+    shiftListOutput.innerText = shiftList
+    
 
 })

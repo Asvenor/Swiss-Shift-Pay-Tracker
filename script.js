@@ -38,12 +38,17 @@ addShiftButton.addEventListener('click', ()=>{
     const hoursWorked = end - start - breakIn
     const moneyEarned = hoursWorked * hourly
 
-    shiftList.push(shiftIn)
-    shiftList.push(date)
+    shiftList.push(shift)
+
+    shiftListOutput.innerText = ""
+    
+    for(i = 0; i < shiftList.length; i++) {
+        shiftListOutput.innerText += `${shiftList[i].date} - ${shiftList[i].Shift} \n`
+        console.log(shiftList[i])
+    }
+    
 
     totalHours.innerText = hoursWorked
-    totalPay.innerText = moneyEarned
-    shiftListOutput.innerText = shiftList
-    
+    totalPay.innerText = moneyEarned    
 
 })

@@ -1,0 +1,41 @@
+//Shift Elements
+const dateInput = document.getElementById('dateInput')
+const startTimeInput = document.getElementById('startTimeInput')
+const endTimeInput = document.getElementById('endTimeInput')
+const breakInput = document.getElementById('breakInput')
+const hourlyWageInput = document.getElementById('hourlyWageInput')
+const shiftInput = document.getElementById('shiftInput')
+//Add Shift Button
+const addShiftButton = document.getElementById('addShiftButton')
+//Output Elements
+const shiftListOutput = document.getElementById('shiftListOutput')
+const totalHours = document.getElementById('totalours')
+const totalPay = document.getElementById('totalPay')
+const monthlyTotal = document.getElementById('monthlyTotal')
+
+
+
+
+
+
+addShiftButton.addEventListener('click', ()=>{
+    const date = dateInput.value
+    const start = startTimeInput.value
+    const end = endTimeInput.value
+    const breakIn = breakInput.value
+    const hourly = hourlyWageInput.value
+    const shiftIn = shiftInput.value
+
+
+    const shift = {
+        date: date,
+        Start_Time: start,
+        End_Time: end,
+        Break: breakIn,
+        Hourly_Wage: hourly,
+        Shift: shiftIn,
+    }
+    
+
+
+})

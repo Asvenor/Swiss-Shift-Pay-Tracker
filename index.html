@@ -8,44 +8,54 @@
 </head>
 <body>
     <h1>Swiss Shift & Pay Tracker</h1>
+    <div class="shiftSpace">
+        <div>     
+            <div class="inputGroup">
+                <label for="dateInput">Date</label>
+                <input type="text" placeholder="Date" id="dateInput">
+            </div>
 
-    <div>
-        <label for="dateInput">Date</label>
-        <input type="text" placeholder="Date" id="dateInput">
+            <div class="inputGroup">
+                <label for="startTimeInput">Start Time</label>
+                <input type="text" placeholder="Start Time" id="startTimeInput">
+            </div>
 
-        <label for="startTimeInput">Start Time</label>
-        <input type="text" placeholder="Start Time" id="startTimeInput">
+            <div class="inputGroup">
+                <label for="endTimeInput">End Time</label>
+                <input type="text" placeholder="End Time" id="endTimeInput">
+            </div>
 
-        <label for="endTimeInput">End Time</label>
-        <input type="text" placeholder="End Time" id="endTimeInput">
+            <div class="inputGroup">
+                <label for="breakInput">Break</label>
+                <input type="text" placeholder="Break" id="breakInput">
+            </div>
+        </div>
 
-        <label for="breakInput">Break</label>
-        <input type="text" placeholder="Break" id="breakInput">
+        <div class="inputGroup">
+            <label for="hourlyWageInput">Hourly Wage</label>
+            <input type="text" placeholder="Hourly Wage" id="hourlyWageInput">
+        </div>
+
+        <div class="inputGroup">
+            <label for="shiftInput">Shift</label>
+            <input type="text" placeholder="Shift" id="shiftInput">
+            <button>Add Shift</button>
+        </div>
     </div>
-
-    <div>
-        <label for="hourlyWageInput">Hourly Wage</label>
-        <input type="text" placeholder="Hourly Wage" id="hourlyWageInput">
-    </div>
-
-    <div>
-        <button>Add Shift</button>
-        <label for="shiftInput">Shift</label>
-        <input type="text" placeholder="Shift" id="shiftInput">
-    </div>
-
-    <div>
-        <h6>Shift List</h6>
-        <div id="shiftListOutput"></div>
-    </div>  
-    <div>
-        <h2>Summary</h2>
-        <p>Total Hours: <span id="totalHours">0</span></p>
-        <p>Total Pay: CHF <span id="totalPay">0.00</span></p>
-    </div>
-    <div>
-        <h6>Monthly Total</h6>
-        <p id="monthlyTotal">CHF 0.00</p>
+    <div class="outputSpace">
+        <div class="outputGroup">
+            <h6>Shift List</h6>
+            <div id="shiftListOutput"></div>
+        </div>
+        <div class="outputGroup">
+            <h2>Summary</h2>
+            <p>Total Hours: <span id="totalHours">0</span></p>
+            <p>Total Pay: CHF <span id="totalPay">0.00</span></p>
+        </div>
+        <div class="outputGroup">
+            <h6>Monthly Total</h6>
+            <p id="monthlyTotal">CHF 0.00</p>
+        </div>
     </div>
 
     <script src="script.js"></script>

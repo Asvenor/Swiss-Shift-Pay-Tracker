@@ -1,0 +1,25 @@
+.shiftSpace {
+    border: solid black 1px;
+    padding: 10px 10px;
+    
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.outputSpace {
+    border: solid black 1px;
+    padding: 10px 10px;
+    margin: 20px 0px;
+}
+
+.outputGroup {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+}

@@ -23,3 +23,11 @@
     width: 500px;
     margin: 0 auto;
 }
+
+#addShiftButton {
+    margin: 10px 10px;
+}
+
+#clearList {
+    margin: 10px 10px;
+}

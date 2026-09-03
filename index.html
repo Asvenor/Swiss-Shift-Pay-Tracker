@@ -19,7 +19,7 @@
         <div>     
             <div class="inputGroup">
                 <label for="dateInput">Date</label>
-                <input type="text" placeholder="XX.XX" id="dateInput">
+                <input type="date" placeholder="XX.XX" id="dateInput">
             </div>
 
             <div class="inputGroup">
@@ -39,7 +39,7 @@
         </div>
 
         <div class="inputGroup">
-            <label for="hourlyWageInput">Hourly Wage</label>
+            <label for="hourlyWageInput">Hourly Wage (CHF per Hour)</label>
             <input type="text" placeholder="26" id="hourlyWageInput">
         </div>
 
@@ -47,15 +47,16 @@
             <label for="shiftInput">Shift</label>
             <input type="text" placeholder="Morning" id="shiftInput">
             <button type="submit" id="addShiftButton">Add Shift</button>
+            <button type="submit" id="clearList">Clear List</button>
         </div>
     </div>
+    <h2>Summary</h2>
     <div class="outputSpace">
         <div class="outputGroup">
-            <label for="shiftList">Shift List</label>
+            <label for="shiftList"><strong>Shift List</strong></label>
             <p id="shiftListOutput"></p>
         </div>
         <div class="outputGroup">
-            <h2>Summary</h2>
             <p>Total Hours: <span id="totalHours">0</span></p>
             <p>Total Pay: CHF <span id="totalPay">0.00</span></p>
         </div>

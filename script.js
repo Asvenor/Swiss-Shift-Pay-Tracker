@@ -13,6 +13,8 @@ const totalHours = document.getElementById('totalHours')
 const totalPay = document.getElementById('totalPay')
 const monthlyTotal = document.getElementById('monthlyTotal')
 const dateOutput = document.getElementById('dateOutput')
+//Clear Button
+const clearList = document.getElementById('clearList')
 
 const shiftList = []
 
@@ -41,7 +43,7 @@ addShiftButton.addEventListener('click', ()=>{
     shiftList.push(shift)
 
     shiftListOutput.innerText = ""
-    
+
     for(i = 0; i < shiftList.length; i++) {
         shiftListOutput.innerText += `${shiftList[i].date} - ${shiftList[i].Shift} \n`
         console.log(shiftList[i])
@@ -50,5 +52,9 @@ addShiftButton.addEventListener('click', ()=>{
 
     totalHours.innerText = hoursWorked
     totalPay.innerText = moneyEarned    
+})
 
+clearList.addEventListener('click', ()=>{
+    const shiftList = []
+    shiftListOutput.innerText = ""
 })

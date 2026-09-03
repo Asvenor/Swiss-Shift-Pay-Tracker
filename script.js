@@ -39,6 +39,7 @@ addShiftButton.addEventListener('click', ()=>{
     }
     const hoursWorked = end - start - breakIn
     const moneyEarned = hoursWorked * hourly
+    const monthlyEarned = moneyEarned
 
     shiftList.push(shift)
 
@@ -51,7 +52,8 @@ addShiftButton.addEventListener('click', ()=>{
     
 
     totalHours.innerText = hoursWorked
-    totalPay.innerText = moneyEarned    
+    totalPay.innerText = moneyEarned  
+    monthlyTotal.innerText = monthlyEarned 
 })
 
 clearList.addEventListener('click', ()=>{

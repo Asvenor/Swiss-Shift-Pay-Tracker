@@ -5,76 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swiss Shift & Pay Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Swiss Shift & Pay Tracker</h1>
-    <p>Hinweis: Zeiten werden als Dezimalstunden eingegeben.
-    Beispiele:
-    0.5 = 30 Minuten
-    0.3 = 18 Minuten
-    0.25 = 15 Minuten
-    1.5 = 1 Stunde 30 Minuten
-    </p>
-    <p><strong>Die meisten Arbeitgeber Runden Kaufmänisch</strong></p>
-    <div class="shiftSpace">
-        <div>     
-            <div class="inputGroup">
-                <label for="dateInput">Date</label>
-                <input type="date" placeholder="XX.XX" id="dateInput">
-            </div>
-
-            <div class="inputGroup">
-                <label for="startTimeInput">Start Time</label>
-                <input type="time" placeholder="00.00" id="startTimeInput">
-            </div>
-
-            <div class="inputGroup">
-                <label for="endTimeInput">End Time</label>
-                <input type="time" placeholder="00.00" id="endTimeInput">
-            </div>
-
-            <div class="inputGroup">
-                <label for="breakInput">Break</label>
-                <input type="text" placeholder="0.0" id="breakInput">
-            </div>
+<main>
+    <body>
+        <h1>Swiss Shift & Pay Tracker</h1>
+        <p>Hinweis: Zeiten werden als Dezimalstunden eingegeben.
+        Beispiele:
+        0.5 = 30 Minuten
+        0.3 = 18 Minuten
+        0.25 = 15 Minuten
+        1.5 = 1 Stunde 30 Minuten
+        </p>
+        <div class="dotField">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
-
-        <div class="inputGroup">
-            <label for="hourlyWageInput">Hourly Wage (CHF per Hour)</label>
-            <input type="text" placeholder="26" id="hourlyWageInput">
-        </div>
-
-        <div class="inputGroup">
-            <label for="shiftInput">Shift</label>
-            <select name="shift" id="shiftInput">
-                <option value="Morning">Morning</option>
-                <option value="Evening">Evening</option>
-                <option value="Night">Night</option>
-            </select>
-
+        <p><strong>Die meisten Arbeitgeber Runden Kaufmänisch</strong></p>
+        <div class="shiftSpace">
             <div>
-                <button type="submit" id="addShiftButton">Add Shift</button>
-                <button type="submit" id="clearList">Clear List</button>
+                <div class="inputGroup">
+                    <label for="dateInput">Date</label>
+                    <input type="date" placeholder="XX.XX" id="dateInput">
+                </div>
+    
+                <div class="inputGroup">
+                    <label for="startTimeInput">Start Time</label>
+                    <input type="time" placeholder="00.00" id="startTimeInput">
+                </div>
+    
+                <div class="inputGroup">
+                    <label for="endTimeInput">End Time</label>
+                    <input type="time" placeholder="00.00" id="endTimeInput">
+                </div>
+    
+                <div class="inputGroup">
+                    <label for="breakInput">Break</label>
+                    <input type="text" placeholder="0.0" id="breakInput">
+                </div>
+            </div>
+    
+            <div class="inputGroup">
+                <label for="hourlyWageInput">Hourly Wage (CHF per Hour)</label>
+                <input type="text" placeholder="26" id="hourlyWageInput">
+            </div>
+    
+            <div class="inputGroup">
+                <label for="shiftInput">Shift</label>
+                <select name="shift" id="shiftInput">
+                    <option value="Morning">Morning</option>
+                    <option value="Evening">Evening</option>
+                    <option value="Night">Night</option>
+                </select>
+    
+                <div>
+                    <button type="submit" id="addShiftButton">Add Shift</button>
+                    <button type="submit" id="clearList">Clear List</button>
+                </div>
             </div>
         </div>
-    </div>
-    <h2 id="summary">Summary</h2>
-    <div class="outputSpace">
-        <div class="outputGroup">
-            <label for="shiftList"><strong>Shift List</strong></label>
-            <p id="shiftListOutput"></p>
+        <h2 id="summary">Summary</h2>
+        <div class="outputSpace">
+            <div class="outputGroup">
+                <label for="shiftList"><strong>Shift List</strong></label>
+                <p id="shiftListOutput"></p>
+            </div>
+            <div class="outputGroup">
+                <p>Total Hours: <span id="totalHours">0</span></p>
+                <p>Total Pay: CHF <span id="totalPay">0.00</span></p>
+            </div>
+            <div class="outputGroup">
+                <h6>Monthly Total</h6>
+                <p id="monthlyTotal"></p>
+            </div>
         </div>
-        <div class="outputGroup">
-            <p>Total Hours: <span id="totalHours">0</span></p>
-            <p>Total Pay: CHF <span id="totalPay">0.00</span></p>
-        </div>
-        <div class="outputGroup">
-            <h6>Monthly Total</h6>
-            <p id="monthlyTotal"></p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+    
+        <script src="script.js"></script>
+        <script src="effekt.js"></script>
+    </body>
+</main>
 
 </html>

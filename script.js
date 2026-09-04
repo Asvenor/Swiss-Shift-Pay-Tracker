@@ -16,7 +16,7 @@ const dateOutput = document.getElementById('dateOutput')
 //Clear Button
 const clearList = document.getElementById('clearList')
 
-const shiftList = []
+let shiftList = []
 
 function toDecimalTime(time) {
     const hourMin = time.split(':')
@@ -34,7 +34,7 @@ addShiftButton.addEventListener('click', ()=>{
     const hourly = hourlyWageInput.value
     const shiftIn = shiftInput.value
 
-    const hoursWorked = toDecimalTime(end).toFixed(1) - toDecimalTime(start).toFixed(1) - breakIn
+    const hoursWorked = toDecimalTime(end) - toDecimalTime(start) - breakIn
     const moneyEarned = hoursWorked * hourly
     
     const shift = {
@@ -68,13 +68,16 @@ addShiftButton.addEventListener('click', ()=>{
     
     }
     
-    totalHours.innerText = hoursWorked
-    totalPay.innerText = moneyEarned  
-    monthlyTotal.innerText = monthlyTotalCalc
+    totalHours.innerText = hoursWorked.toFixed(1)
+    totalPay.innerText = moneyEarned.toFixed(1)
+    monthlyTotal.innerText = monthlyTotalCalc.toFixed(1)
 
 })
 
 clearList.addEventListener('click', ()=>{
-    const shiftList = []
+    let shiftList = []
     shiftListOutput.innerText = ""
+    totalHours.innerText = '0.00'
+    totalPay.innerText = '0.00'
+    monthlyTotal.innerText = ''
 })

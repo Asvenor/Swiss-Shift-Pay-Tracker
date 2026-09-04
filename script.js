@@ -18,7 +18,13 @@ const clearList = document.getElementById('clearList')
 
 const shiftList = []
 
+function toDecimalTime(time) {
+    const hourMin = time.split(':')
+    const hour = Number(hourMin[0])
+    const min = Number(hourMin[1])
 
+    return hour + min / 60
+}
 
 addShiftButton.addEventListener('click', ()=>{
     const date = dateInput.value
@@ -28,7 +34,9 @@ addShiftButton.addEventListener('click', ()=>{
     const hourly = hourlyWageInput.value
     const shiftIn = shiftInput.value
 
-
+    const hoursWorked = toDecimalTime(end).toFixed(1) - toDecimalTime(start).toFixed(1) - breakIn
+    const moneyEarned = hoursWorked * hourly
+    
     const shift = {
         date: date,
         Start_Time: start,
@@ -36,24 +44,34 @@ addShiftButton.addEventListener('click', ()=>{
         Break: breakIn,
         Hourly_Wage: hourly,
         Shift: shiftIn,
+        moneyEarned: moneyEarned,
     }
-    const hoursWorked = end - start - breakIn
-    const moneyEarned = hoursWorked * hourly
-    const monthlyEarned = moneyEarned
+
+    if(shift.date === "" || shift.Start_Time === "" || shift.End_Time === "" || shift.Break === "" || shift.Hourly_Wage === "" || shift.Shift === "") {
+    alert('Your forgot something')
+    return
+    }
 
     shiftList.push(shift)
 
     shiftListOutput.innerText = ""
 
-    for(i = 0; i < shiftList.length; i++) {
+    for(let i = 0; i < shiftList.length; i++) {
         shiftListOutput.innerText += `${shiftList[i].date} - ${shiftList[i].Shift} \n`
         console.log(shiftList[i])
     }
-    
 
+    let monthlyTotalCalc = 0
+
+    for (let i = 0; i < shiftList.length; i++) {
+        monthlyTotalCalc = monthlyTotalCalc + shiftList[i].moneyEarned
+    
+    }
+    
     totalHours.innerText = hoursWorked
     totalPay.innerText = moneyEarned  
-    monthlyTotal.innerText = monthlyEarned 
+    monthlyTotal.innerText = monthlyTotalCalc
+
 })
 
 clearList.addEventListener('click', ()=>{

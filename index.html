@@ -24,12 +24,12 @@
 
             <div class="inputGroup">
                 <label for="startTimeInput">Start Time</label>
-                <input type="text" placeholder="00.00" id="startTimeInput">
+                <input type="time" placeholder="00.00" id="startTimeInput">
             </div>
 
             <div class="inputGroup">
                 <label for="endTimeInput">End Time</label>
-                <input type="text" placeholder="00.00" id="endTimeInput">
+                <input type="time" placeholder="00.00" id="endTimeInput">
             </div>
 
             <div class="inputGroup">
@@ -45,12 +45,19 @@
 
         <div class="inputGroup">
             <label for="shiftInput">Shift</label>
-            <input type="text" placeholder="Morning" id="shiftInput">
-            <button type="submit" id="addShiftButton">Add Shift</button>
-            <button type="submit" id="clearList">Clear List</button>
+            <select name="shift" id="shiftInput">
+                <option value="Morning">Morning</option>
+                <option value="Evening">Evening</option>
+                <option value="Night">Night</option>
+            </select>
+
+            <div>
+                <button type="submit" id="addShiftButton">Add Shift</button>
+                <button type="submit" id="clearList">Clear List</button>
+            </div>
         </div>
     </div>
-    <h2>Summary</h2>
+    <h2 id="summary">Summary</h2>
     <div class="outputSpace">
         <div class="outputGroup">
             <label for="shiftList"><strong>Shift List</strong></label>

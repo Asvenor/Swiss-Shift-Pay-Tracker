@@ -3,6 +3,7 @@
     padding: 10px 10px;
     width: 500px;
     margin: 0px auto;
+    background-color: beige;
     
 }
 
@@ -16,8 +17,10 @@
 .outputSpace {
     border: solid black 1px;
     padding: 10px 10px;
-    margin: 0px auto;
+    margin: 60px auto;
     width: 500px;
+    background-color: beige;
+    
 }
 
 .outputGroup {
@@ -41,4 +44,9 @@
 
 body {
     font-family: "Manrope", sans-serif;
+}
+
+#summary {
+    position: absolute;
+    left: 380px;
 }

@@ -50,3 +50,33 @@ body {
     position: absolute;
     left: 380px;
 }
+
+input, select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+button {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#addShiftButton {
+    background: #111;
+    color: white;
+}
+
+#clearList {
+    background: #eaeaea;
+    color: #111;
+}
+
+button:hover {
+    opacity: 0.85;
+}
